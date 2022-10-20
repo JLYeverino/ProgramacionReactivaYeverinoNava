@@ -1,0 +1,52 @@
+<div class="cont-listados">
+  <div class="list-alumnos">
+    <h3>Alumnos desde Observable</h3>
+    <ul class="list-cali">
+      <div *ngFor="let alumno of alumnos$ | async">
+      <li>
+        Alumno: {{ alumno.nombre}} {{ alumno.apePaterno}}
+        <br>
+        Matrícula: {{ alumno.matricula}}
+        <br>
+        Edad: {{ alumno.edad}}
+        <br>
+        Promedio: {{ alumno.promedio}}
+      </li>
+      </div>
+    </ul>
+  </div>
+  
+  <div class="list-alumnos">
+    <h3>Alumnos desde Observable con Map (Filtrado por matricula)</h3>
+    <ul class="list-cali">
+      <div *ngFor="let alumnoMap of alumnoMap$ | async">
+      <li>
+        Alumno: {{ alumnoMap.nombre}} {{ alumnoMap.apePaterno}}
+        <br>
+        Matrícula: {{ alumnoMap.matricula}}
+        <br>
+        Edad: {{ alumnoMap.edad}}
+        <br>
+        Promedio: {{ alumnoMap.promedio}}
+      </li>
+      </div>
+    </ul>
+  </div>
+  
+  <div class="list-alumnos">
+    <h3>Alumnos desde Promise</h3>
+    <ul class="list-cali">
+      <div *ngFor="let alumnoProm of alumnos">
+      <li>
+        Alumno: {{ alumnoProm.nombre}} {{ alumnoProm.apePaterno}}
+        <br>
+        Matrícula: {{ alumnoProm.matricula}}
+        <br>
+        Edad: {{ alumnoProm.edad}}
+        <br>
+        Promedio: {{ alumnoProm.promedio}}
+      </li>
+      </div>
+    </ul>
+  </div>
+</div>
